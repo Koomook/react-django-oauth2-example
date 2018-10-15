@@ -28,8 +28,8 @@ def github_authenticate(request):
         backend='github',
         token=github_token
     )
+    print(django_auth_token)
     user = get_user_from_token(django_auth_token)
-
     return Response(
         {'token': django_auth_token,
          'user': UserSerializer(user).data},

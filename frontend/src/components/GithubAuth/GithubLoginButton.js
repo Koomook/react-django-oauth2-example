@@ -9,7 +9,7 @@ const GithubLoginButton = props => {
   const onFailure = response => console.error(response);
   return (
     <GitHubLogin
-      clientId="cef1ec48f4ae7d49fcf0"
+      clientId="f5559a879f2aff086280"
       onSuccess={onSuccess}
       onFailure={onFailure}
       redirectUri=""

@@ -9,6 +9,7 @@ const initialState = {
 };
 
 function githubAuthReducer(state = initialState, action) {
+  console.log(action.type)
   switch (action.type) {
     case "SENDING_GITHUB_CODE":
       return {
