@@ -5,9 +5,8 @@ export const url = "http://127.0.0.1:8000";
 /*These are the django client ID and SECRET
   from the OauthToolkit Application registered in your django admin
 */
-export const django_client_id = "1Pbma6OalyEaQ7Efqlq4BpR77yQcALJcjO7x3OSq";
-export const django_client_secret =
-  "8PbtM6yxFAZiW0eNrI37T6At0Dv9rPSdPmhKTyCcd5gZnboMTXleWRJwlAWUCoCkxaKmY5qVkM5RUVRNZtoTWKNJQSjIEVetISs5D8VVAP8yj9KAdc75cHXhwtSC1E8A";
+export const django_client_id = "cmCIs0LX136YffrFZkLQBAQwnfbyqZFs9GgVQZuZ";
+export const django_client_secret = "Z33StItbq6VeX5QO2UVHOe3YBLyj2buQR86AfjkusLgHegLv1fVQuH5yWt6yU7SzfDiEhzeNvy0WlogHaWeM2xj36sQdLVBXRVz39Z0cpoT8LH3Po8Xoa75elFp8jqGr";
 
 const isAuthenticating = () => ({
   type: "GOOG_IS_AUTHENTICATING"
