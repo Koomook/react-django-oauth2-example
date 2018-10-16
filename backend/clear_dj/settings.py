@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'rest_framework_social_oauth2',
     'dog',
     'github_social',
-    'user_obj'
+    'user_obj',
 ]
 
 MIDDLEWARE = [
@@ -117,28 +117,32 @@ REST_FRAMEWORK = {
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.google.GoogleOAuth2',  # for Google authentication
     'social_core.backends.github.GithubOAuth2',  # for Github authentication
-    #'social_core.backends.facebook.FacebookOAuth2',  # for Facebook authentication
+    # 'social_core.backends.facebook.FacebookOAuth2',  # for Facebook authentication
+    # django-rest-framework-social-oauth2
+    'rest_framework_social_oauth2.backends.DjangoOAuth2',
     'django.contrib.auth.backends.ModelBackend',
 )
 
 # GOOGLE
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.environ.get('SOCIAL_AUTH_GOOGLE_OAUTH2_KEY')
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.environ.get(
-    "SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET")
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.environ.get("SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET")
 
 # GITHUB
 SOCIAL_AUTH_GITHUB_KEY = os.environ.get('SOCIAL_AUTH_GITHUB_KEY')
 SOCIAL_AUTH_GITHUB_SECRET = os.environ.get('SOCIAL_AUTH_GITHUB_SECRET')
 
-# CORS_ORIGIN_WHITELIST = (
-#     'localhost:3000',
-#     'localhost:3001',
-# )
+CORS_ORIGIN_WHITELIST = (
+    'localhost:3000',
+    'localhost:3001',
+    'localhost:8888',
+)
 CORS_ALLOW_CREDENTIALS = True
 
 CORS_ORIGIN_ALLOW_ALL = True
 
 #DJANGO OAUTH TOOLKIT EXPIRATION SECONDS  - DEFAULT IS 36000 WHICH IS 10 hours
 OAUTH2_PROVIDER = {
-    'ACCESS_TOKEN_EXPIRE_SECONDS': 36000,
+    'ACCESS_TOKEN_EXPIRE_SECONDS': 3600,
 }
+# REST_SOCIAL_OAUTH_REDIRECT_URI = '/'
+# REST_SOCIAL_DOMAIN_FROM_ORIGIN = False

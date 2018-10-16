@@ -6,6 +6,7 @@ const initialState = {
 };
 
 function googleInfoReducer(state = initialState, action) {
+  console.log(action.type)
   switch (action.type) {
     case "GOOG_IS_AUTHENTICATING":
       return {
